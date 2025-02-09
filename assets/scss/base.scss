@@ -17,6 +17,11 @@ body {
     background-color: variables.$background-color;
 }
 
+body.dark {
+    background-color: variables.$background-dark-color;;
+    color: variables.$text-light-color;
+}
+
 a {
     @include mixins.link;
 }

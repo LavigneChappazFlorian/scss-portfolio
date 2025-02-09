@@ -9,10 +9,16 @@
         padding: 0 50px;
         height: 80px;
 
-        &__left a {
-            color: variables.$text-color;
-            font-size: 22px;
-            font-weight: 600;
+        &__left {
+            a {
+                color: variables.$text-color;
+                font-size: 22px;
+                font-weight: 600;
+            }
+
+            a.dark {
+                color: variables.$text-light-color;
+            }
         }
 
         &__right {
@@ -25,6 +31,10 @@
                     color: variables.$text-color;
                     margin: 0 10px;
                 }
+
+                a.dark {
+                    color: variables.$text-light-color;
+                }
     
                 a:last-child {
                     color: variables.$text-light-color;
@@ -32,9 +42,28 @@
                     padding: 5px 15px;
                     border-radius: 5px;
                 }
+
+                a:last-child.dark {
+                    color: variables.$text-color;
+                    background-color: variables.$background-color;
+                }
     
                 a span {
                     margin-left: 5px;
+                }
+
+                a span.dark {
+                    color: variables.$text-light-color;
+                }
+
+                button {
+                    cursor: pointer;
+                    border: none;
+                    background-color: transparent;
+                }
+
+                button.dark {
+                    color: variables.$text-light-color;
                 }
             }
         }
@@ -68,7 +97,7 @@
                 border-radius: 5px;
                 margin-right: 10px;
                 margin-bottom: 10px;
-                transition: .1s;
+                transition: all 300ms ease-out 0s;
             }
 
             & a:hover {

@@ -14,6 +14,11 @@ body {
   background-color: #eeeff1;
 }
 
+body.dark {
+  background-color: #1a1c20;
+  color: #eeeff1;
+}
+
 a {
   color: #4a76ee;
   text-decoration: none;
@@ -36,6 +41,9 @@ header, main {
   font-size: 22px;
   font-weight: 600;
 }
+.header__nav__left a.dark {
+  color: #eeeff1;
+}
 .header__nav__right__icon {
   display: none;
 }
@@ -43,14 +51,32 @@ header, main {
   color: #1a1c20;
   margin: 0 10px;
 }
+.header__nav__right__menu a.dark {
+  color: #eeeff1;
+}
 .header__nav__right__menu a:last-child {
   color: #eeeff1;
   background-color: #1a1c20;
   padding: 5px 15px;
   border-radius: 5px;
 }
+.header__nav__right__menu a:last-child.dark {
+  color: #1a1c20;
+  background-color: #eeeff1;
+}
 .header__nav__right__menu a span {
   margin-left: 5px;
+}
+.header__nav__right__menu a span.dark {
+  color: #eeeff1;
+}
+.header__nav__right__menu button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+.header__nav__right__menu button.dark {
+  color: #eeeff1;
 }
 
 .main__home {
@@ -78,7 +104,7 @@ header, main {
   border-radius: 5px;
   margin-right: 10px;
   margin-bottom: 10px;
-  transition: 0.1s;
+  transition: all 300ms ease-out 0s;
 }
 .main__home__text a:hover {
   color: #4a76ee;
