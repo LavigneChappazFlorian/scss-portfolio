@@ -35,7 +35,7 @@
                 a.dark {
                     color: variables.$text-light-color;
                 }
-    
+
                 a:last-child {
                     color: variables.$text-light-color;
                     background-color: variables.$text-color;
@@ -47,7 +47,7 @@
                     color: variables.$text-color;
                     background-color: variables.$background-color;
                 }
-    
+
                 a span {
                     margin-left: 5px;
                 }
@@ -85,28 +85,33 @@
             flex: 4;
             text-align: justify;
 
-            & h2 {
+            h2 {
                 font-size: 45px;
-            }
-
-            & a {
-                display: inline-block;
-                padding: 5px 10px;
-                color: variables.$text-color;
-                border: 2px solid variables.$text-color;
-                border-radius: 5px;
-                margin-right: 10px;
-                margin-bottom: 10px;
-                transition: all 300ms ease-out 0s;
-            }
-
-            & a:hover {
-                color: variables.$link-color;
-                border: 2px solid variables.$link-color;
             }
 
             &__links {
                 margin-top: 25px;
+
+                a {
+                    display: inline-block;
+                    padding: 5px 10px;
+                    color: variables.$text-color;
+                    border: 2px solid variables.$text-color;
+                    border-radius: 5px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    transition: all 300ms ease-out 0s;
+                }
+    
+                a.dark {
+                    color: variables.$text-light-color;
+                    border: 2px solid variables.$text-light-color;
+                }
+    
+                a:hover {
+                    color: variables.$link-color;
+                    border: 2px solid variables.$link-color;
+                }
             }
         }
 
@@ -115,7 +120,7 @@
             display: flex;
             justify-content: right;
 
-            & img {
+            img {
                 width: 300px;
                 border-radius: 50%;
             }
@@ -125,7 +130,7 @@
     &__skills {
         @include mixins.section;
 
-        & h2 {
+        h2 {
             @include mixins.title;
         }
 
@@ -143,7 +148,7 @@
     &__projects {
         @include mixins.section;
 
-        & h2 {
+        h2 {
             @include mixins.title;
         }
 
@@ -158,21 +163,21 @@
                 padding: 10px 10px;
                 width: 300px;
 
-                & img {
+                img {
                     height: 150px;
                     width: 100%;
                     object-fit: cover;
                 }
 
-                & span {
+                span {
                     color: variables.$link-color;
                 }
 
-                & a {
+                a {
                     position: relative;
                 }
 
-                & a::after {
+                a::after {
                     content: '';
                     position: absolute;
                     height: 2px;
@@ -193,31 +198,31 @@
     &__contact {
         @include mixins.section;
 
-        & h2 {
+        h2 {
             @include mixins.title;
         }
 
-        & p {
+        p {
             text-align: center;
 
-            & a {
-                    position: relative;
-                }
+            a {
+                position: relative;
+            }
 
-                & a::after {
-                    content: '';
-                    position: absolute;
-                    height: 2px;
-                    left: 0;
-                    bottom: 0;
-                    width: 0;
-                    background-color: variables.$link-color;
-                    transition: width .3s;
-                }
+            a::after {
+                content: '';
+                position: absolute;
+                height: 2px;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                background-color: variables.$link-color;
+                transition: width .3s;
+            }
 
-                & a:hover:after {
-                    width: 100%;
-                }
+            a:hover:after {
+                width: 100%;
+            }
         }
     }
 }
@@ -228,7 +233,7 @@
 
     padding: 10px 0;
 
-    & p {
+    p {
         text-align: center;
     }
 }

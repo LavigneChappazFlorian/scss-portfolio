@@ -96,7 +96,10 @@ header, main {
 .main__home__text h2 {
   font-size: 45px;
 }
-.main__home__text a {
+.main__home__text__links {
+  margin-top: 25px;
+}
+.main__home__text__links a {
   display: inline-block;
   padding: 5px 10px;
   color: #1a1c20;
@@ -106,12 +109,13 @@ header, main {
   margin-bottom: 10px;
   transition: all 300ms ease-out 0s;
 }
-.main__home__text a:hover {
+.main__home__text__links a.dark {
+  color: #eeeff1;
+  border: 2px solid #eeeff1;
+}
+.main__home__text__links a:hover {
   color: #4a76ee;
   border: 2px solid #4a76ee;
-}
-.main__home__text__links {
-  margin-top: 25px;
 }
 .main__home__picture {
   flex: 2;

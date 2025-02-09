@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const navGithub = document.getElementById("nav-github");
     const navLinkedin = document.getElementById("nav-linkedin");
     const navMail = document.getElementById("nav-mail");
+    const homeLinkSkills = document.getElementById("home-link-skills");
+    const homeLinkProjects = document.getElementById("home-link-projects");
+    const homeLinkContact = document.getElementById("home-link-contact");
 
     // Vérifier le mode enregistré
     if (localStorage.getItem("dark-mode") === "enabled") {
@@ -25,6 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
         navLinkedin.classList.toggle('dark');
         navMail.classList.toggle('dark');
         toggleButton.classList.toggle('dark');
+        homeLinkSkills.classList.toggle('dark');
+        homeLinkProjects.classList.toggle('dark');
+        homeLinkContact.classList.toggle('dark');
 
         if (body.classList.contains("dark")) {
             localStorage.setItem("dark-mode", "enabled");
