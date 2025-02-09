@@ -1,0 +1,205 @@
+@use "./variables.scss";
+@use "./mixins.scss";
+
+.header {
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 50px;
+        height: 80px;
+
+        &__left a {
+            color: variables.$text-color;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        &__right {
+            &__icon {
+                display: none;
+            }
+
+            &__menu {
+                a {
+                    color: variables.$text-color;
+                    margin: 0 10px;
+                }
+    
+                a:last-child {
+                    color: variables.$text-light-color;
+                    background-color: variables.$text-color;
+                    padding: 5px 15px;
+                    border-radius: 5px;
+                }
+    
+                a span {
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+.main {
+    &__home {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 50px;
+        margin: 50px 0;
+        margin-bottom: 100px;
+        gap: 40px;
+
+        &__text {
+            margin-top: 25px;
+            flex: 4;
+            text-align: justify;
+
+            & h2 {
+                font-size: 45px;
+            }
+
+            & a {
+                display: inline-block;
+                padding: 5px 10px;
+                color: variables.$text-color;
+                border: 2px solid variables.$text-color;
+                border-radius: 5px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                transition: .1s;
+            }
+
+            & a:hover {
+                color: variables.$link-color;
+                border: 2px solid variables.$link-color;
+            }
+
+            &__links {
+                margin-top: 25px;
+            }
+        }
+
+        &__picture {
+            flex: 2;
+            display: flex;
+            justify-content: right;
+
+            & img {
+                width: 300px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__skills {
+        @include mixins.section;
+
+        & h2 {
+            @include mixins.title;
+        }
+
+        &__cells {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            &__cell {
+                @include mixins.skill;
+            }
+        }
+    }
+
+    &__projects {
+        @include mixins.section;
+
+        & h2 {
+            @include mixins.title;
+        }
+
+        &__cells {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            &__cell {
+                @include mixins.card;
+                flex-direction: column;
+                padding: 10px 10px;
+                width: 300px;
+
+                & img {
+                    height: 150px;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                & span {
+                    color: variables.$link-color;
+                }
+
+                & a {
+                    position: relative;
+                }
+
+                & a::after {
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    background-color: variables.$link-color;
+                    transition: width .3s;
+                }
+
+                & a:hover:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__contact {
+        @include mixins.section;
+
+        & h2 {
+            @include mixins.title;
+        }
+
+        & p {
+            text-align: center;
+
+            & a {
+                    position: relative;
+                }
+
+                & a::after {
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    background-color: variables.$link-color;
+                    transition: width .3s;
+                }
+
+                & a:hover:after {
+                    width: 100%;
+                }
+        }
+    }
+}
+
+.footer {
+    color: variables.$text-light-color;
+    background-color: variables.$background-dark-color;
+
+    padding: 10px 0;
+
+    & p {
+        text-align: center;
+    }
+}

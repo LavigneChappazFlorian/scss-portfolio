@@ -1,0 +1,16 @@
+{
+  "name": "simply-portfolio",
+  "version": "1.0.0",
+  "description": "simply portfolio florian lavigne chappaz",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch assets/scss/main.scss assets/css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "sass": "^1.84.0"
+  }
+}

@@ -1,0 +1,121 @@
+@use "../variables.scss";
+
+@media (max-width: 850px) {
+    .main {
+        &__home {
+            &__text {
+                & h2 {
+                    font-size: 35px;
+                }
+            }
+        }
+
+        &__contact {
+            & p {
+                text-align: justify;
+            }
+        }
+    }
+}
+
+@media (max-width: 740px) {
+    .header {
+        &__nav {
+            padding: 0 20px;
+
+            &__right {
+                & a {
+                    font-size: 22px;
+                }
+
+                & a:last-child {
+                    color: variables.$text-color;
+                    background-color: transparent;
+                    padding: 0;
+                }
+
+                & a {
+                    & span {
+                    display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .main {
+        &__home {
+            flex-direction: column-reverse;
+            gap: 0;
+
+            &__picture {
+                & img {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .main {
+        &__home {
+            padding: 0 20px;
+
+            &__text {
+                & h2 {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        &__skills {
+            padding: 0 20px;
+
+            &__cells {
+                &__cell {
+                    & span {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        &__projects {
+            padding: 0 20px;
+        }
+
+        &__projects {
+            padding: 0 20px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        &__nav {
+            flex-direction: column;
+            gap: 10px;
+            margin: 0 20px;
+            padding: 20px 0;
+            
+            &__right {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                &__icon {
+                    display: block;
+                }
+
+                &__menu {
+                    display: none;
+                }
+
+                &__menu.active {
+                    display: flex;
+                }
+            }
+        }
+    }
+}

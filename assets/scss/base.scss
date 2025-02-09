@@ -1,0 +1,27 @@
+@use "./variables.scss";
+@use "./mixins.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: variables.$text-color;
+    background-color: variables.$background-color;
+}
+
+a {
+    @include mixins.link;
+}
+
+header, main {
+    max-width: 1400px;
+    margin: 0 auto;
+}
