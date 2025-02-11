@@ -1,4 +1,4 @@
-# Recréation du Site Web KFC
+# Création d'un portfolio en SCSS
 
 Ce projet est une création d'un portfolio en SCSS.
 
